@@ -16,8 +16,9 @@ function setup(){
     world = engine.world;
 
     
-    ground = new Ground(600,height,1200,20)
-
+    ground = new Ground(600,height,1200,20);
+    platform=new Ground(150,305,300,170);
+    
     box1 = new Box(700,320,70,70);
     box2 = new Box(920,320,70,70);
     pig1 = new Pig(810, 350);
@@ -43,9 +44,13 @@ function draw(){
     console.log(box2.body.position.x);
     console.log(box2.body.position.y);
     console.log(box2.body.angle);
+
     box1.display();
     box2.display();
+
     ground.display();
+    platform.display();
+
     pig1.display();
     log1.display();
 
